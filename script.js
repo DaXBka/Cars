@@ -7,7 +7,9 @@ const url =
 // ^ cars.json по ссылке в уроке
 
 const getData = () => {
-    return fetch(url).then(res => res.json());
+    return fetch(url)
+        .then(res => res.json())
+        .catch(error => console.log(error.message));
 };
 
 getData().then(data => {
